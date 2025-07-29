@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from joblib import load
 from pymongo import MongoClient
 from datetime import datetime
+from fastapi.middleware.cors import CORSMiddleware
 
 # Load the trained model
 model = load("Model/drug_pipeline.joblib")
@@ -14,6 +15,7 @@ collection = db["Predictions"]
 
 # FastAPI app
 app = FastAPI()
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 # Input schema
 class DrugInput(BaseModel):
