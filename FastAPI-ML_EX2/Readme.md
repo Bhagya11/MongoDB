@@ -33,7 +33,6 @@ python train_model.py
 
 
 uvicorn drugapi:app --reload
-```
 {
   "prediction": "DrugY",
   "status": "Prediction successful and stored in MongoDB."
