@@ -33,6 +33,11 @@ python train_model.py
 
 
 uvicorn drugapi:app --reload
+```
+{
+  "prediction": "DrugY",
+  "status": "Prediction successful and stored in MongoDB."
+}
 
 ```
 <img width="1357" height="647" alt="1" src="https://github.com/user-attachments/assets/00d35f79-1a2a-4459-82c9-465a80c3128a" />
@@ -42,8 +47,5 @@ uvicorn drugapi:app --reload
 
 
 
-{
-  "prediction": "DrugY",
-  "status": "Prediction successful and stored in MongoDB."
-}
+
 ```
